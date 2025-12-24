@@ -1,0 +1,21 @@
+allprojects {
+    group = "com.absolutephoenix.kindlewood"
+    version = "0.1.0"
+    repositories {
+        mavenCentral()
+    }
+}
+
+subprojects {
+    apply plugin: "java"
+
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(21) // change if you want 17, etc.
+        }
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.encoding = "UTF-8"
+    }
+}

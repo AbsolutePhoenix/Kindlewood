@@ -1,0 +1,5 @@
+rootProject.name = "Kindlewood"
+
+include("bootstrap")
+include("launcher")
+include("game")
